@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>BMI Calculator</h1>
+        <div class="unit-tabs">
+            <button class="tab" onclick="setUnit('us')">US Units</button>
+            <button class="tab active" onclick="setUnit('metric')">Metric Units</button>
+        </div>
+
+        <div class="input-group">
+            <label for="age">Age (2-120):</label>
+            <input type="number" id="age" min="2" max="120" value="25">
+        </div>
+
+        <div class="input-group">
+            <label>Gender:</label>
+            <div class="gender-group">
+                <label><input type="radio" name="gender" value="male" checked> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+        </div>
+
+        <div class="input-group us-unit" style="display: none;">
+            <label for="height-ft">Height:</label>
+            <input type="number" id="height-ft" placeholder="Feet" min="0" value="5"> ft
+            <input type="number" id="height-in" placeholder="Inches" min="0" max="11" value="10"> in
+        </div>
+        <div class="input-group metric-unit">
+            <label for="height-cm">Height (cm):</label>
+            <input type="number" id="height-cm" placeholder="Enter height in centimeters" step="0.1" value="120">
+        </div>
+
+        <div class="input-group us-unit" style="display: none;">
+            <label for="weight-lb">Weight (lb):</label>
+            <input type="number" id="weight-lb" placeholder="Enter weight in pounds" step="0.1" value="160">
+        </div>
+        <div class="input-group metric-unit">
+            <label for="weight-kg">Weight (kg):</label>
+            <input type="number" id="weight-kg" placeholder="Enter weight in kg" step="0.1">
+        </div>
+
+        <div class="button-group">
+            <button class="calculate-btn" onclick="calculateBMI()">Calculate</button>
+            <button class="clear-btn" onclick="clearInputs()">Clear</button>
+        </div>
+
+        <div class="result-container">
+            <div class="bmi-graph">
+                <img src="/assests/bmi-graph.png" alt="BMI Graph" id="bmiGraph">
+                <p style="font-size: 12px; color: #666;">Replace 'bmi-graph.png' with your BMI graph image.</p>
+            </div>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
