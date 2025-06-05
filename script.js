@@ -52,11 +52,11 @@ function calculateBMI() {
 }
 
 function clearInputs() {
-    document. PIE.getElementById('age').value = '25';
-    document.getElementById('height-ft').value = '5';
-    document.getElementById('height-in').value = '10';
-    document.getElementById('weight-lb').value = '160';
-    document.getElementById('height-cm').value = '120';
+    document.getElementById('age').value = '';
+    document.getElementById('height-ft').value = '';
+    document.getElementById('height-in').value = '';
+    document.getElementById('weight-lb').value = '';
+    document.getElementById('height-cm').value = '';
     document.getElementById('weight-kg').value = '';
     document.getElementById('result').innerHTML = '';
 }
